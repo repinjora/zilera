@@ -62,4 +62,5 @@ document.head.insertAdjacentHTML('beforeend',`<style>
 #choiceModal .modal>div[style*="height:105px"]{display:none!important}#zonePhoto{height:245px!important;margin:20px auto 24px!important;background-size:cover!important;background-position:center!important;max-width:100%;border-radius:18px!important}.choice-photo-card{min-height:150px!important;padding:7px!important}.choice-photo{height:76px!important;flex-basis:76px!important}.choice-radio small{display:none!important}.choice-radio b{font-size:13px!important;line-height:1.2}.choice-list{gap:10px!important}
 @media(max-width:800px){#zonePhoto{height:235px!important;width:100%}.choice-photo-card{flex-basis:165px!important;min-width:165px!important}.choice-photo{height:68px!important;flex-basis:68px!important}}
 </style>`);
+const choiceModal=document.getElementById('choiceModal');if(choiceModal){new MutationObserver(()=>{if(choiceModal.classList.contains('open'))choiceModal.querySelector('.modal').scrollTop=0}).observe(choiceModal,{attributes:true,attributeFilter:['class']})}
 </script></body></html>
